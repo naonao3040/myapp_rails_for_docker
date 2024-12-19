@@ -4,6 +4,7 @@ volumes:
   db-data:
 
 services:
+ # rails
   web:
     build: .
     ports:
@@ -19,6 +20,7 @@ services:
     links:
       - db
 
+  # db
   db:
     image: postgres
     environment:
