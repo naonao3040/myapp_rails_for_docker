@@ -2,10 +2,12 @@ sudo: required
 
 services: docker
 
+language: ruby
+rvm:
+  - 3.0
+
 before_install:
   - gem install bundler -v 2.2.33
-  - bundle config set --local deployment 'true'
-  - bundle config set --local jobs 3
   - docker-compose up --build -d
 
 script:
